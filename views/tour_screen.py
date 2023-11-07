@@ -25,7 +25,7 @@ class TourScreen:
             st.session_state['tour_screen'] = 0
             self._user = Login().login_usuario(secrets.tour.user, secrets.tour.password)
             if self._user:
-               self._user.autenticar_usuario()          
+               self._user.autenticar_usuario(p_tour=True)          
         st.divider()
         voltar = st.button(label='Voltar')
         if voltar:
